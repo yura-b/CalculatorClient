@@ -1,0 +1,29 @@
+<main class="main">
+  <div class="main-container">
+
+  <div class="calculator">
+    <input type="number" id="first-operand" [(ngModel)]="firstOperand" aria-describedby="first-op-desc" />
+
+    <label for="operator">Operator:</label>
+    <select id="operator" [(ngModel)]="operator">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+    </select>
+
+    <input type="number" id="second-operand" [(ngModel)]="secondOperand" aria-describedby="second-op-desc" />
+
+    <button (click)="calculate()">Calculate</button>
+    <div class="output">Result: {{ result }}</div>
+  </div>
+  <div class="error-container">
+    <div class="errorMessage">{{ error }}</div>
+  </div>
+</div>
+
+</main>
+
+
+
+<router-outlet></router-outlet>
